@@ -3,7 +3,7 @@ Exam 1, problem 3.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
+         and Micah Fletcher.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
@@ -17,7 +17,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the doc-string for the  sum_of_digits  and   is_prime
+# DONE: 2.  READ the doc-string for the  sum_of_digits  and   is_prime
 # functions defined below.  They are the same as what you have seen before.
 # After you UNDERSTAND the doc-string (JUST the doc-string, NOT the code),
 # ASKING QUESTIONS AS NEEDED, change the above _TODO_ to DONE.
@@ -190,7 +190,7 @@ def problem3a(a, b):
       -- problem3a(8, 2) = 11 + 23 + 29 + 41 + 43 + 47 + 61  (which is 255)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -198,6 +198,16 @@ def problem3a(a, b):
     #    **  For full credit you must appropriately
     #    **  use (call) the appropriate function(s) that are DEFINED ABOVE.
     ###########################################################################
+    total = 0
+    for k in range((a**b)-a):
+        if is_prime(a) == True:
+            sum = sum_of_digits(a)
+            if is_prime(sum) == True:
+                total = total + a
+
+        a = a + 1
+
+    return(total)
 
 
 def run_test_problem3b():
